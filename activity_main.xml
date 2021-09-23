@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/teal_200"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Assignment SudGoyal GitUsers"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_margin="10dp"
+        android:background="@drawable/oval"
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/avatar"/>
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/changeUser"-->
+    <!--        android:layout_width="40sp"-->
+    <!--        android:layout_height="40sp"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/topGuide"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        android:src="@drawable/ic_baseline_edit_24"-->
+    <!--        android:layout_marginEnd="25sp"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_id"
+        android:textColor="@color/purple_200"
+        android:textSize="25sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_below="@id/toolbar"
+        android:layout_toRightOf="@id/avatar"
+        android:layout_margin="20dp"
+        android:id="@+id/userName"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sepLine"
+        android:layout_margin="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="30sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/email_email_com"
+        android:textColor="@color/purple_200"
+        android:textSize="22sp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userName"
+        app:backgroundTint="@color/teal_200"
+        android:layout_margin="16dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/change_user"
+        app:srcCompat="@drawable/editwhite"
+        ></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <ImageView
+        android:id="@+id/sepLine"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginTop="5sp"
+        android:layout_below="@id/avatar"
+        android:background="@color/purple_700"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:id="@+id/publicRepos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email"
+        android:layout_margin="20dp"
+        android:text="@string/public_repos"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/publicGists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/public_gists"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/publicRepos" />
+
+    <TextView
+        android:id="@+id/followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/followers"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:textColor="@color/purple_200"
+        android:layout_below="@id/publicGists"
+        />
+
+    <TextView
+        android:id="@+id/following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/following"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/followers"
+        />
+
+    <TextView
+        android:id="@+id/showProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="@color/purple_200"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/repositories"
+        android:text="@string/github_profile"/>
+
+    <Button
+        android:id="@+id/repositories"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@drawable/buttonrec"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20sp"
+        android:text="@string/repositories"
+        android:textSize="22sp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        />
+
+</RelativeLayout>
